@@ -90,10 +90,10 @@ int main() {
     assert(text_to_AMUR_HTTP_CODES("526") == AMUR_CODE_526);
     assert(text_to_AMUR_HTTP_CODES("600") == AMUR_CODE_ERROR);
 
-    assert(text_to_AMUR_HTTP_VERSIONS("HTTP/0.9") == AMUR_GET);
-    assert(text_to_AMUR_HTTP_VERSIONS("HTTP/1.0") == AMUR_HEAD);
-    assert(text_to_AMUR_HTTP_VERSIONS("HTTP/1.1") == AMUR_POST);
-    assert(text_to_AMUR_HTTP_VERSIONS("HTTP/2") == AMUR_PUT);
+    assert(text_to_AMUR_HTTP_VERSIONS("HTTP/0.9") == AMUR_HTTP_0_9);
+    assert(text_to_AMUR_HTTP_VERSIONS("HTTP/1.0") == AMUR_HTTP_1_0);
+    assert(text_to_AMUR_HTTP_VERSIONS("HTTP/1.1") == AMUR_HTTP_1_1);
+    assert(text_to_AMUR_HTTP_VERSIONS("HTTP/2") == AMUR_HTTP_2);
     assert(text_to_AMUR_HTTP_VERSIONS("HTTP/321") == AMUR_HTTP_VERSION_ERROR);
 
     char request1[] = "GET 100 HTTP/1.1\n";
